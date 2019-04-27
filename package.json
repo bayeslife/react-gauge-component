@@ -1,0 +1,62 @@
+{
+  "name": "react-gauge-component",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development",
+    "lint": "eslint --ext .jsx --ext .js --fix src test",
+    "transpile": "babel src -d dist --copy-files",
+    "prepublishOnly": "npm run lint && npm run transpile",
+    "pack": "webpack --mode production",
+    "github": "gh-pages -d examples/dist",
+    "build": "npm run lint && npm run transpile && npm run pack",
+    "deploy": "npm run build && npm run github",
+    "test": "riteway -r @babel/register -r @babel/polyfill test/**/*.test.js",
+    "watch": "nodemon --exec 'npm run test'"
+  },
+  "peerDependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "author": "bayeslife",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/polyfill": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.4.0",
+    "babel-loader": "^8.0.5",
+    "css-loader": "^2.1.1",
+    "eslint": "5.16.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-standard": "^4.0.0",
+    "gh-pages": "^2.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "riteway": "^6.0.3",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1",
+    "nodemon": "^1.18.11"
+  },
+  "dependencies": {
+    "d3-array": "^2.0.3",
+    "d3-color": "^1.2.3",
+    "d3-format": "^1.3.2",
+    "d3-interpolate": "^1.3.2",
+    "d3-path": "^1.0.7",
+    "d3-scale": "^3.0.0",
+    "d3-selection": "^1.4.0",
+    "d3-shape": "^1.3.5",
+    "d3-transition": "^1.2.0"
+  }
+}
