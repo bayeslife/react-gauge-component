@@ -1,5 +1,7 @@
 # react-gauge-component React UI Component    
 
+![Animated Gif](./images/GaugeComponent.gif)
+
 ## When to use this component
 
 Use this when the application needs to display a single axis measurement such as Dig Rate, Truck Load Time. 
