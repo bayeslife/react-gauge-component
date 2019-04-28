@@ -7,7 +7,7 @@
 Use this when the application needs to display a single axis measurement such as Dig Rate, Truck Load Time. 
 
 ## About this component
-This project is intended to publish a react component library project to npm along with an example to github pages. 
+This project is intended to publish a react component library project to npm along with an example to [github pages](https://bayeslife.github.io/react-gauge-component/index.html). 
 
 It has unit test for the component based on [this](https://medium.com/javascript-scene/unit-testing-react-components-aeda9a44aae2)
 
