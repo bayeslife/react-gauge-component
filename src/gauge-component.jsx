@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import { format } from 'd3-format'
-import { interpolateHsl}  from 'd3-interpolate'
+import { interpolateHsl }  from 'd3-interpolate'
 import {pie, line, arc} from 'd3-shape'
 import {select} from 'd3-selection'
 import {rgb} from 'd3-color'
@@ -14,7 +14,7 @@ const GaugeComponent =  ({ name,measurement, onClick }) => {
   const [theGauge, setGauge] = useState(null);
   let thegauge = theGauge
   let setup = () => {
-	  if(!theGauge){
+	if(!theGauge){
 		thegauge = gauge(`#${name}`, {
 			size: 300,
 			clipWidth: 300,
@@ -22,11 +22,11 @@ const GaugeComponent =  ({ name,measurement, onClick }) => {
 			ringWidth: 60,
 			maxValue: 10,
 			transitionMs: 2000,
-		  });
-		  thegauge.render();
-		  setGauge(thegauge)
-	  }
-	  thegauge.update(measurement)
+		});
+		thegauge.render();
+		setGauge(thegauge)
+	}
+	thegauge.update(measurement)
   }
 
   var gauge = function(container, configuration) {
